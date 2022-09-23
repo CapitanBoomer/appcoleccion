@@ -1,0 +1,74 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ folder }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ folder }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+  <div class="centrartodo">
+    <h3>Precuelas</h3>
+    <div class="galeria">
+      <ion-card *ngFor="let pelicula of peliculas">
+        <img src={{pelicula.poster}} />
+        <ion-card-header>
+          <ion-card-subtitle>{{pelicula.categoria}}</ion-card-subtitle>
+          <ion-card-title>{{pelicula.titulo}}</ion-card-title>
+          <ion-card-subtitle>{{pelicula.subtitulo}}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{pelicula.sinopsis}}</p>
+        </ion-card-content>
+      </ion-card>
+
+
+
+    </div>
+  </div>
+
+  <div class="centrartodo">
+    <h1>Trilogia original</h1>
+    <div class="galeria">
+
+      <ion-card href="">
+        <img [src]="imagen4" />
+        <ion-card-header>
+          <ion-card-subtitle>ciencia ficcion</ion-card-subtitle>
+          <ion-card-title>Star wars</ion-card-title>
+          <ion-card-subtitle>{{titulo2}}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{sinopsis2}}</p>
+        </ion-card-content>
+      </ion-card>
+
+
+    </div>
+  </div>
+  <hr>
+  <div class="centrartodo">
+    <h1>Trilogia Disney</h1>
+    <div class="galeria">
+      <div class="poster"><a href="https://ww1.cuevana3.me/1143/star-wars-html"><img [src]="imagen7" class="poster"
+            height="420" width="250"></a></div>
+      <div class="poster"><a href="https://ww1.cuevana3.me/1146/star-wars-episode-v-the-empire-strikes-back"><img
+            [src]="imagen8" class="poster" height="420" width="250"></a></div>
+      <div class="poster"><a href="https://ww1.cuevana3.me/1137/star-wars-episode-ii-attack-of-the-clones"><img
+            [src]="imagen9" class="poster" height="420" width="250"></a></div>
+    </div>
+
+  </div>
+
+
+
+</ion-content>
